@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active:
+      - test
+      - prod
+
+---
+spring:
+  config:
+    activate:
+      on-profile:
+        - test
+server:
+  port: 4000
+welcomeMsg: Hello from Test
+
+---
+spring:
+  config:
+    activate:
+      on-profile:
+        - prod
+server:
+  port: 5000
+welcomeMsg2: Hello from Prod
